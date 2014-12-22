@@ -16,7 +16,7 @@ function updateTitle(href) {
       , title = undefined
       , titleElement = undefined
       ;
-    if (domain == 'travis-ci.org') {
+    if (domain == 'travis-ci.org' && url.length > 3) {
         if (url.length > 3) {
             slug = url[3] + '/' + url[4];
             title = slug;
