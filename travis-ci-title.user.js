@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Travis-CI Informational HTML Titles
-// @namespace    http://github.com/rhyolight
-// @version      0.1
-// @description  Replaces generic HTML titls for Travis-CI build pages with on that depicts the repo slug and build number.
+// @namespace    https://github.com/rhyolight/travis-ci-userscripts/blob/master/travis-ci-title.user.js
+// @version      0.2
+// @description  Replaces generic HTML titles for Travis-CI build pages with one that depicts the repo slug and build number.
 // @author       Matthew Taylor
 // @grant        none
 // ==/UserScript==
