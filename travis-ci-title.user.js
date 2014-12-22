@@ -7,17 +7,18 @@
 // @grant        none
 // ==/UserScript==
 
-var lastUrl = undefined;
+var lastUrl = undefined
+  , titleElement = document.getElementsByTagName('title')[0]
+  , originalTitle = titleElement.innerHTML;
 
 function updateTitle(href) {
     var url = href.split('/')
       , domain = url[2]
       , slug = ''
       , title = undefined
-      , titleElement = undefined
       ;
-    if (domain == 'travis-ci.org' && url.length > 3) {
-        if (url.length > 3) {
+    if (domain == 'travis-ci.org') {
+        if (url.length > 3 && url[3] != '') {
             slug = url[3] + '/' + url[4];
             title = slug;
             if (url.length == 6) {
@@ -32,8 +33,9 @@ function updateTitle(href) {
         }
     }
     if (title) {
-        titleElement = document.getElementsByTagName('title')[0];
         titleElement.innerHTML = title;
+    } else {
+        titleElement.innerHTML = originalTitle;
     }
 }
 
